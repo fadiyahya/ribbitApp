@@ -1,4 +1,10 @@
 RibbitApp::Application.routes.draw do
+  get "session/new"
+
+  post "session/create"
+
+  get "session/destroy"
+
   root to: 'users#new'
   resources :users
 
