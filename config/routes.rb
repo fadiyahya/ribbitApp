@@ -1,4 +1,7 @@
 RibbitApp::Application.routes.draw do
+  resources :ribbits
+
+
   get "session/new"
 
   post "session/create"
