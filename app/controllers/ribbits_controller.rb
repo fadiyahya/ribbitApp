@@ -11,4 +11,9 @@ class RibbitsController < ApplicationController
 			redirect_to current_user
 		end
 	end
+
+	def index
+		@ribbits = Ribbit.all include: :user
+		@ribbit  = Ribbit.new
+	end
 end
