@@ -24,7 +24,7 @@
                     <%= submit_tag "Unfollow" %>
                 <% end %>
             <% else %>
-                <%= form_for relationship do %>
+                <%= form_for @relationship do %>
                     <%= hidden_field_tag :followed_id, @user.id %>
                     <%= submit_tag "Follow" %>
                 <% end %>

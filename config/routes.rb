@@ -1,18 +1,15 @@
 RibbitApp::Application.routes.draw do
+  root to: 'users#new'
+  
   resources :relationships
-
-
   resources :ribbits
 
-
   get "session/new"
-
   post "session/create"
-
   get "session/destroy"
 
-  root to: 'users#new'
   resources :users
+  get 'buddies', to: 'users#buddies', as: 'buddies'
 
 
   # The priority is based upon order of creation:
